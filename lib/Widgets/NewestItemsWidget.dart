@@ -1,4 +1,4 @@
-// ignore_for_file: prefer_const_constructors, use_key_in_widget_constructors, file_names
+// ignore_for_file: prefer_const_constructors, use_key_in_widget_constructors, file_names, sized_box_for_whitespace, prefer_const_literals_to_create_immutables
 
 import 'package:flutter/material.dart';
 
@@ -29,8 +29,25 @@ class NewestItemsWidget extends StatelessWidget {
                 ),
                 child: Row(children: [InkWell(onTap: () {},
                 child: Container(alignment: Alignment.center,
-                child: Image.asset( "images/efef.jpg", height: 120, width: 100),
+                child: Image.asset( "images/efef.jpg", height: 120, width: 150),
                 ),
+                ),
+                Container(
+                  width: 190,
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    mainAxisAlignment: MainAxisAlignment.spaceAround,
+                    children: [
+                      Text("Hot Pizza", style: TextStyle(
+                        fontSize: 22, fontWeight: FontWeight.bold,
+                      ),
+                      ),
+                       Text("Taste Our Hot Pizza, We Provide Our Foods", style: TextStyle(
+                        fontSize: 16, 
+                      ),
+                      ),
+                    ],
+                  ),
                 ),
                 ],
                 ),
