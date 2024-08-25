@@ -1,4 +1,4 @@
-// ignore_for_file: file_names, prefer_const_constructors, use_key_in_widget_constructors, prefer_const_literals_to_create_immutables, sized_box_for_whitespace, unused_import
+// ignore_for_file: file_names, prefer_const_constructors, use_key_in_widget_constructors, prefer_const_literals_to_create_immutables, sized_box_for_whitespace, unused_import, sort_child_properties_last
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -105,6 +105,22 @@ Padding(padding: EdgeInsets.only(top: 20, left: 10),
               //Newest Item Widget
               NewestItemsWidget()  
         ],
+      ),
+      floatingActionButton: Container(
+        decoration: BoxDecoration(borderRadius: BorderRadius.circular(20), boxShadow: [
+          BoxShadow(
+            color: Colors.grey.withOpacity(0.5),
+            spreadRadius: 2,
+            blurRadius: 10,
+            offset: Offset(0, 3),
+          ),
+        ]),
+        child: FloatingActionButton(onPressed: () {},
+        child: Icon(
+          CupertinoIcons.cart,size: 28, color: Colors.red,
+        ),
+        backgroundColor: Colors.white,
+        ),
       ),
     );
   }
