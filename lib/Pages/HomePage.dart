@@ -6,6 +6,7 @@ import '../Widgets/AppBarWidget.dart';
 import '../Widgets/CategoriesWidget.dart';
 import '../Widgets/PopularItemsWidget.dart';
 import '../Widgets/NewestItemsWidget.dart';
+import '../Widgets/DrawerWidget.dart';
 
 
 class HomePage extends StatelessWidget {
@@ -103,9 +104,10 @@ Padding(padding: EdgeInsets.only(top: 20, left: 10),
                 ),
                 ),
               //Newest Item Widget
-              NewestItemsWidget()  
+              NewestItemsWidget() , 
         ],
       ),
+      drawer: DrawerWidget(),
       floatingActionButton: Container(
         decoration: BoxDecoration(borderRadius: BorderRadius.circular(20), boxShadow: [
           BoxShadow(

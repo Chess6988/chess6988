@@ -17,9 +17,12 @@ class AppBarWidget extends StatelessWidget {
         children: [
           // Menu Button
           InkWell(
-            onTap: () {},
+            onTap: () {
+              Scaffold.of(context).openDrawer();
+            },
             child: Container(
-              padding: EdgeInsets.all(12), // Increased padding for a larger touch area
+              padding: EdgeInsets.all(
+                  12), // Increased padding for a larger touch area
               decoration: BoxDecoration(
                 gradient: LinearGradient(
                   colors: [Colors.blueAccent, Colors.cyan],
@@ -36,14 +39,16 @@ class AppBarWidget extends StatelessWidget {
                   ),
                 ],
               ),
-              child: Icon(CupertinoIcons.bars, color: Colors.white), // Changed icon color
+              child: Icon(CupertinoIcons.bars,
+                  color: Colors.white), // Changed icon color
             ),
           ),
           // Notification Button
           InkWell(
             onTap: () {},
             child: Container(
-              padding: EdgeInsets.all(12), // Increased padding for a larger touch area
+              padding: EdgeInsets.all(
+                  12), // Increased padding for a larger touch area
               decoration: BoxDecoration(
                 gradient: LinearGradient(
                   colors: [Colors.orangeAccent, Colors.deepOrange],
@@ -60,7 +65,8 @@ class AppBarWidget extends StatelessWidget {
                   ),
                 ],
               ),
-              child: Icon(Icons.notifications, color: Colors.black), // Changed icon color
+              child: Icon(Icons.notifications,
+                  color: Colors.black), // Changed icon color
             ),
           ),
         ],
